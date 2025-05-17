@@ -122,7 +122,7 @@ namespace ds {
 		void RemoveValue(const std::string &key);
 		bool IsEmpty() const;
 		// Creates a copy of all data contained in this block
-		Block *Copy();
+        virtual Block *Copy() override;
 		std::string ToString(const std::optional<std::string> &rootIdentifier, uint8_t tabDepth = 0) const;
 		virtual void AddData(const std::string &name, const std::shared_ptr<Base> &data);
 		std::shared_ptr<ds::Base> AddValue(const std::string &type, const std::string &name, const std::string &value);
